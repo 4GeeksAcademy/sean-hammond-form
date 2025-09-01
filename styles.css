@@ -1,0 +1,17 @@
+body {
+    margin: 40px;
+}
+
+h1 {
+    background-color: beige;
+    border: 1px solid gray;
+    border-radius: 5px 5px 0px 0px;
+    margin-bottom: -1px;
+    padding: 25px;
+}
+
+form {
+    border: 1px solid gray;
+    border-radius: 0px 0px 5px 5px;
+    padding: 25px;
+}
