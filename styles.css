@@ -33,3 +33,7 @@ li {
 #message {
     height: 200px;
 }
+
+.bg-danger-subtle {
+    border-radius: 5px;
+}

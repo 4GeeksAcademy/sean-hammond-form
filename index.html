@@ -19,6 +19,11 @@
   <body>
     <h1>Payment form example</h1>
     <form>
+      <!-- Row 0 (Displayed if any fields are empty) -->
+      <span class="row bg-danger-subtle">
+        <p class="mb-3 col-12">Some fields are missing.</p>
+      </span>
+      <small class="mb-3 mt-3">Note: The above should display only if fields are empty but we did not learn how to make this dynamic at the time this project was assigned, and it is not connected to React.</small>
       <!-- Row 1 -->
       <span class="row">
         <div class="mb-3 col-4">
@@ -55,6 +60,7 @@
           <input type="text" class="form-control" id="lastName" />
         </div>
       </span>
+      <!-- Row 3 -->
       <span class="row">
         <div class="mb-3 col-6">
           <label for="city" class="form-label">City</label>
@@ -85,6 +91,7 @@
           <input type="text" class="form-control" id="postalCode" />
         </div>
       </span>
+      <!-- I tried so many ways to get these radios displayed horizontally with the Message to the right but could not. -->
       <span class="row border-bottom">
         <p>We accept:</p>
         <ul>
@@ -108,10 +115,12 @@
           </li>
         </ul>
       </span>
+      <!-- Buttons -->
       <span>
         <button type="submit" class="btn btn-secondary mt-3">Cancel</button>
         <button type="submit" class="btn btn-primary mt-3">Send</button>
       </span>
+      <!-- Message is here since I couldn't get it to the right of the radio buttons. -->
       <span class="row">
         <div class="mb-3 col-12">
           <label for="message" class="form-label">Message</label>
