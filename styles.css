@@ -15,3 +15,21 @@ form {
     border-radius: 0px 0px 5px 5px;
     padding: 25px;
 }
+
+#postalCode button {
+    width: 400%;
+}
+
+#postalCode button:hover {
+    background-color: white;
+    color: darkgray;
+    text-transform: uppercase;
+}
+
+li {
+    list-style-type: none;
+}
+
+#message {
+    height: 200px;
+}

@@ -4,6 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Payment example</title>
+    <script
+      src="https://kit.fontawesome.com/0b77e7860d.js"
+      crossorigin="anonymous"
+    ></script>
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -15,46 +19,108 @@
   <body>
     <h1>Payment form example</h1>
     <form>
+      <!-- Row 1 -->
       <span class="row">
-        <div class="mb-3 col-5">
-          <label for="cardNumber" class="form-label">Card#</label>
-          <input
-            type="email"
-            class="form-control"
-            id="cardNumber"
-            aria-describedby="emailHelp"
-          />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
-          </div>
-        </div>
         <div class="mb-3 col-4">
           <label for="cardNumber" class="form-label">Card#</label>
           <input
-            type="email"
+            type="tel"
             class="form-control"
             id="cardNumber"
-            aria-describedby="emailHelp"
+            aria-describedby="cardHelp"
           />
-          <div id="emailHelp" class="form-text">
-            We'll never share your email with anyone else.
+          <div id="cardHelp" class="form-text">
+            We'll never share your card number with anyone else.
           </div>
+        </div>
+        <div class="mb-3 col-4">
+          <label for="cvcNumber" class="form-label">CVC#</label>
+          <input type="tel" class="form-control" id="cvcNumber" />
+        </div>
+        <div class="mt-4 col-1 text-end"><h2>$</h2></div>
+        <div class="mb-3 col-3">
+          <label for="amount" class="form-label">Amount</label>
+          <input type="number" class="form-control" id="amount" />
         </div>
       </span>
 
-      <div class="mb-3">
-        <label for="exampleInputPassword1" class="form-label">Password</label>
-        <input
-          type="password"
-          class="form-control"
-          id="exampleInputPassword1"
-        />
-      </div>
-      <div class="mb-3 form-check">
-        <input type="checkbox" class="form-check-input" id="exampleCheck1" />
-        <label class="form-check-label" for="exampleCheck1">Check me out</label>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
+      <!-- Row 2 -->
+      <span class="row">
+        <div class="mb-3 col-6">
+          <label for="firstName" class="form-label">First Name</label>
+          <input type="text" class="form-control" id="firstName" />
+        </div>
+        <div class="mb-3 col-6">
+          <label for="lastName" class="form-label">Last Name</label>
+          <input type="text" class="form-control" id="lastName" />
+        </div>
+      </span>
+      <span class="row">
+        <div class="mb-3 col-6">
+          <label for="city" class="form-label">City</label>
+          <input type="text" class="form-control" id="city" />
+        </div>
+        <div class="mb-3 col-3">
+          <label for="state" class="form-label">State</label>
+          <!-- Dropdown for state -->
+          <div class="dropdown mb-3 col-3" id="postalCode">
+            <button
+              class="btn btn-outline-secondary border border-secondary-subtle dropdown-toggle"
+              type="button"
+              data-bs-toggle="dropdown"
+              aria-expanded="false"
+            >
+              Pick a state
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Alabama</a></li>
+              <li><a class="dropdown-item" href="#">Florida</a></li>
+              <li><a class="dropdown-item" href="#">Texas</a></li>
+              <li><a class="dropdown-item" href="#">Another State</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="mb-3 col-3">
+          <label for="postalCode" class="form-label">Postal Code</label>
+          <input type="text" class="form-control" id="postalCode" />
+        </div>
+      </span>
+      <span class="row border-bottom">
+        <p>We accept:</p>
+        <ul>
+          <li>
+            <input type="radio" class="form-check-input" id="exampleCheck1" />
+            <label class="form-check-label" for="exampleCheck1"
+              ><i class="fa-brands fa-cc-mastercard"></i
+            ></label>
+          </li>
+          <li>
+            <input type="radio" class="form-check-input" id="exampleCheck1" />
+            <label class="form-check-label" for="exampleCheck1"
+              ><i class="fa-brands fa-cc-visa"></i
+            ></label>
+          </li>
+          <li>
+            <input type="radio" class="form-check-input" id="exampleCheck1" />
+            <label class="form-check-label" for="exampleCheck1"
+              ><i class="fa-solid fa-credit-card"></i
+            ></label>
+          </li>
+        </ul>
+      </span>
+      <span>
+        <button type="submit" class="btn btn-secondary mt-3">Cancel</button>
+        <button type="submit" class="btn btn-primary mt-3">Send</button>
+      </span>
+      <span class="row">
+        <div class="mb-3 col-12">
+          <label for="message" class="form-label">Message</label>
+          <input type="textarea" class="form-control" id="message" />
+        </div>
+        <div id="messageHelp" class="form-text">
+            Add notes here.
+          </div>
+      </span>
     </form>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
